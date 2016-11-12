@@ -4,7 +4,7 @@ module.exports = {
       'session': {
         'sessionId': 'SessionId.8d7f65bb-9822-404e-ac40-5cd7ba355334',
         'application': {
-          'applicationId': 'my_alexa_id'
+          'applicationId': 'amzn1.ask.skill.8bf5b4cf-73a9-446c-9169-57abbbd87101'
         },
         'attributes': {},
         'user': {

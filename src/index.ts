@@ -4,13 +4,14 @@ export class Handler {
 
   constructor(event: Alexa.RequestBody, context: Alexa.Context, callback: Function) {
     let alexa = Alexa.handler(event, context);
-    alexa.appId = "my_alexa_id";
+    alexa.appId = "amzn1.ask.skill.8bf5b4cf-73a9-446c-9169-57abbbd87101";
 
     let unitData = require("./data/unit-data.json");
 
-    let handlers = {
+    let handlers: Alexa.Handlers = {
       "LaunchRequest": function () {
-        this.emit("AMAZON.HelpIntent");
+        let self: Alexa.Handler = this;
+        self.emit("AMAZON.HelpIntent");
       },
       "UnitDataIntent": function () {
         let self: Alexa.Handler = this;
@@ -32,14 +33,18 @@ export class Handler {
         let groundDps = unitData[unit.toLowerCase()]["groundDps"];
         let airDps = unitData[unit.toLowerCase()]["airDps"];
         let output: string = "The " + unit.toLowerCase() + " does ";
-        if (groundDps !== "-") {
-          output += groundDps + " DPS to ground";
-        }
-        if (groundDps !== "-" && airDps !== "-") {
-          output += " and ";
-        }
-        if (airDps !== "-") {
-          output += airDps + " DPS to air";
+        if (groundDps == airDps) {
+          output += groundDps + " DPS to both air and ground";
+        } else {
+          if (groundDps !== "-") {
+            output += groundDps + " DPS to ground";
+          }
+          if (groundDps !== "-" && airDps !== "-") {
+            output += " and ";
+          }
+          if (airDps !== "-") {
+            output += airDps + " DPS to air";
+          }
         }
         self.emit(":tellWithCard", output, "Unit DPS Intent", output);
       },
@@ -62,15 +67,18 @@ export class Handler {
         self.emit(":tellWithCard", output, "Unit Damage Intent", output);
       },
       "AMAZON.HelpIntent": function () {
+        let self: Alexa.Handler = this;
         let output = "You can say tell me about a Starcraft 2 unit... What can I help you with?";
         let reprompt = "What can I help you with?";
-        this.emit(":ask", output, reprompt);
+        self.emit(":ask", output, reprompt);
       },
       "AMAZON.CancelIntent": function () {
-        this.emit(":tell", "Goodbye! Good luck, have fun!");
+        let self: Alexa.Handler = this;
+        self.emit(":tell", "Goodbye! Good luck, have fun!");
       },
       "AMAZON.StopIntent": function () {
-        this.emit(":tell", "Goodbye! Good luck, have fun!");
+        let self: Alexa.Handler = this;
+        self.emit(":tell", "Goodbye! Good luck, have fun!");
       }
     };
     alexa.registerHandlers(handlers);

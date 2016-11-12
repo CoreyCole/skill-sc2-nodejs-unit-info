@@ -10,7 +10,9 @@ var requireDir = require('require-dir')
 requireDir('./gulp-tasks')
 
 gulp.task('copyNodeModules', function () {
-  gulp.src(gnf(), { base: './' }).pipe(gulp.dest('./dist'))
+  // gulp.src(gnf(), { base: './' }).pipe(gulp.dest('./dist'))
+  return gulp.src(['node_modules/**/*'])
+    .pipe(gulp.dest('dist/node_modules'))
 })
 
 gulp.task('mocha', ['tslint', 'tsc', 'copyNodeModules'], function () {
