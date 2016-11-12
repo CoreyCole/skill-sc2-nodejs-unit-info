@@ -1,0 +1,25 @@
+{
+  "intents": [
+    {
+      "intent": "UnitDataIntent",
+      "slots": [
+        {
+          "name": "Unit",
+          "type": "LIST_OF_UNITS"
+        }
+      ]
+    },
+    {
+      "intent": "AMAZON.RepeatIntent"
+    },
+    {
+      "intent": "AMAZON.HelpIntent"
+    },
+    {
+      "intent": "AMAZON.StopIntent"
+    },
+    {
+      "intent": "AMAZON.CancelIntent"
+    }
+  ]
+}

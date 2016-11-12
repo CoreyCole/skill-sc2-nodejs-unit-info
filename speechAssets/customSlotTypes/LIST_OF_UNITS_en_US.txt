@@ -1,0 +1,67 @@
+Archon
+Auto-Turret
+Baneling
+Banshee
+Battlecruiser
+Brood Lord
+Broodling
+Carrier
+Changeling
+Colossus
+Corruptor
+Dark Templar
+Drone
+Ghost
+Hellbat
+Hellion
+High Templar
+Hydralisk
+Immortal
+Infested Terran
+Infestor
+Interceptor
+Larva
+Locust
+Marauder
+Marine
+Medivac
+Missile Turret
+Mothership
+Mothership Core
+Mule
+Mutalisk
+Nexus
+Nydus Worm
+Observer
+Oracle
+Overlord
+Overseer
+Phoenix
+Photon Cannon
+Planetary Fortress
+Point Defense Drone
+Probe
+Queen
+Raven
+Reaper
+Roach
+SCV
+Sentry
+Siege Tank (siege)
+Siege Tank (tank)
+Spine Crawler
+Spore Crawler
+Stalker
+Swarm Host
+Tempest
+Thor
+Thor 2
+Ultralisk
+Viking (am)
+Viking (fm)
+Viper
+Void Ray
+Warp Prism
+Widow Mine
+Zealot
+Zergling

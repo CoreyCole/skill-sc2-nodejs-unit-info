@@ -1,0 +1,6 @@
+UnitDataIntent tell me about the {Unit}
+UnitDataIntent tell me about {Unit}
+UnitDamageIntent how much damage does a {Unit} do
+UnitDamageIntent tell me about {Unit}'s damage
+UnitDpsIntent how much DPS does a {Unit} do
+UnitDpsIntent how many DPS does a {Unit} do
