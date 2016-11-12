@@ -33,7 +33,7 @@ export class Handler {
         let groundDps = unitData[unit.toLowerCase()]["groundDps"];
         let airDps = unitData[unit.toLowerCase()]["airDps"];
         let output: string = "The " + unit.toLowerCase() + " does ";
-        if (groundDps == airDps) {
+        if (groundDps === airDps) {
           output += groundDps + " DPS to both air and ground";
         } else {
           if (groundDps !== "-") {
