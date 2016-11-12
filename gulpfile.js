@@ -15,7 +15,7 @@ gulp.task('copyNodeModules', function () {
 
 gulp.task('mocha', ['tslint', 'tsc', 'copyNodeModules'], function () {
   return gulp.src('test/**/**.js', { read: false })
-    .pipe(mocha({ reporter: 'nyan' }))
+    .pipe(mocha({}))
 })
 
 gulp.task('default', ['tslint', 'tsc', 'copyNodeModules', 'mocha'])
