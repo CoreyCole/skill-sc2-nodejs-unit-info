@@ -3,7 +3,7 @@ UnitDataIntent tell me about a {Unit}
 UnitDataIntent tell me about {Unit}
 UnitDamageIntent how much damage does a {Unit} do
 UnitDamageIntent how many damage does a {Unit} do
-UnitDamageIntent tell me about {Unit}'s damage
+UnitDamageIntent tell me about {Unit} damage
 UnitDpsIntent how much DPS does a {Unit} do
 UnitDpsIntent how many DPS does a {Unit} do
-UnitDpsIntent tell me about {Unit}'s DPS
+UnitDpsIntent tell me about {Unit} DPS

@@ -1,7 +1,28 @@
 {
   "intents": [
     {
+      "intent": "LaunchRequest"
+    },
+    {
       "intent": "UnitDataIntent",
+      "slots": [
+        {
+          "name": "Unit",
+          "type": "LIST_OF_UNITS"
+        }
+      ]
+    },
+    {
+      "intent": "UnitDpsIntent",
+      "slots": [
+        {
+          "name": "Unit",
+          "type": "LIST_OF_UNITS"
+        }
+      ]
+    },
+    {
+      "intent": "UnitDamageIntent",
       "slots": [
         {
           "name": "Unit",
